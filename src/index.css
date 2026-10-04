@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b0f17;
+    color: #e2e8f0;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Bold & Thicker Animations */
+/* High-Impact & Ultra-Thick Neon Animations */
+@keyframes floatDynamic {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1deg);
+  }
+}
+
+@keyframes floatDynamicDelayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-1.5deg);
+  }
+}
+
+@keyframes rotateConic {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes laserSweep {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 200%;
+  }
+}
+
+@keyframes pulseGlowUltra {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.6)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.4));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 60px rgba(99, 102, 241, 0.95)) drop-shadow(0 0 100px rgba(56, 189, 248, 0.7));
+  }
+}
+
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmerBoldFast {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float-slow {
+  animation: floatDynamic 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDynamicDelayed 4.8s ease-in-out infinite 1.5s;
+}
+
+.animate-pulse-glow-ultra {
+  animation: pulseGlowUltra 3.5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 10s linear infinite;
+}
+
+.text-shimmer-bold {
+  background: linear-gradient(90deg, #818cf8 0%, #38bdf8 25%, #f43f5e 50%, #a855f7 75%, #818cf8 100%);
+  background-size: 250% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmerBoldFast 3s linear infinite;
+}
+
+/* Active Spinning Conic Neon Frame - Ultra Thick 6px & High Contrast */
+.neon-conic-frame {
+  position: relative;
+  border-radius: 1.6rem;
+  padding: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(99, 102, 241, 0.9), 0 0 100px rgba(168, 85, 247, 0.6), inset 0 0 30px rgba(56, 189, 248, 0.4);
+}
+
+.neon-conic-frame::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: conic-gradient(
+    from 0deg,
+    #6366f1 0deg,
+    #06b6d4 60deg,
+    #a855f7 120deg,
+    #ec4899 180deg,
+    #eab308 240deg,
+    #10b981 300deg,
+    #6366f1 360deg
+  );
+  animation: rotateConic 3.5s linear infinite;
+  z-index: 0;
+}
+
+.neon-conic-inner {
+  position: relative;
+  border-radius: 1.35rem;
+  background: #0B0F17;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-glow-indigo-bold {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), inset 0 0 12px rgba(99, 102, 241, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-glow-indigo-bold:hover {
+  box-shadow: 0 0 45px rgba(99, 102, 241, 1), 0 0 70px rgba(168, 85, 247, 0.6);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.card-bold-hover {
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-bold-hover:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 20px 45px -5px rgba(99, 102, 241, 0.4), 0 0 30px rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.9) !important;
+}
+
+/* Moving Laser Border along top of cards */
+.card-laser {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-laser::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #818cf8, #38bdf8, #c084fc, transparent);
+  animation: laserSweep 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(99, 102, 241, 0.25) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+
