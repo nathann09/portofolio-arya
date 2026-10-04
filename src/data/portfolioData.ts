@@ -1,3 +1,7 @@
+import silaporImage from '../assets/images/silapor_ui_mockup_1791040131747.jpg';
+import freshFusionImage from '../assets/images/fresh_fusion_campaign_1791040147123.jpg';
+import desaSuciImage from '../assets/images/desa_suci_web_1791040161639.jpg';
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -147,7 +151,7 @@ export const PROJECTS: ProjectItem[] = [
     organization: 'BNN Kabupaten Sidoarjo',
     role: 'UI Designer (SILAPOR) Intern',
     period: 'Januari 2025 – Februari 2025',
-    image: '/src/assets/images/silapor_ui_mockup_1791040131747.jpg',
+    image: silaporImage,
     summary: 'Perancangan antarmuka web sistem pelaporan terpadu yang menyatukan alur kerja 4 divisi BNN: Urusan Umum, Rehabilitasi, Pencegahan & Dayamas (P2M), dan Klinik.',
     metrics: [
       { label: 'Halaman Utama', value: '9 Halaman' },
@@ -184,7 +188,7 @@ export const PROJECTS: ProjectItem[] = [
     organization: 'PT Nurul Fikri Cipta Inovasi',
     role: 'Digital Marketing Intern',
     period: 'Februari 2025 – Juni 2025',
-    image: '/src/assets/images/fresh_fusion_campaign_1791040147123.jpg',
+    image: freshFusionImage,
     summary: 'Eksekusi pemasaran digital 360 derajat untuk brand parfum unisex lokal Fresh Fusion, mencakup riset pasar 21 responden, pembuatan 2 buyer personas, produksi konten video, SEO, dan konversi marketplace.',
     metrics: [
       { label: 'Total Video Views', value: '12.082 Views' },
@@ -221,7 +225,7 @@ export const PROJECTS: ProjectItem[] = [
     organization: 'KKN Kelompok 25 Universitas Trunojoyo Madura',
     role: 'Web Developer & Koordinator Publikasi',
     period: 'Desember 2024 – Januari 2025',
-    image: '/src/assets/images/desa_suci_web_1791040161639.jpg',
+    image: desaSuciImage,
     summary: 'Pembangunan portal website resmi Desa Suci untuk transparansi layanan publik, serta pendampingan langsung legalitas perizinan Nomor Induk Berusaha (NIB) dan sertifikat SPP-IRT bagi UMKM pertanian lokal.',
     metrics: [
       { label: 'Portal Layanan', value: '1 Portal Resmi' },
@@ -256,7 +260,7 @@ export const PROJECTS: ProjectItem[] = [
     organization: 'Universitas Trunojoyo Madura (Skripsi S-1)',
     role: 'Peneliti Utama / Mahasiswa Sistem Informasi',
     period: 'Agustus 2025 – 2026',
-    image: '/src/assets/images/silapor_ui_mockup_1791040131747.jpg',
+    image: silaporImage,
     summary: 'Penelitian skripsi mendalam yang membandingkan performa pendekatan berbasis kamus (Lexicon-Based Sentiment Analysis) dengan anotasi manual manusia terhadap ribuan ulasan aplikasi edukasi Ruangguru di Google Play Store.',
     metrics: [
       { label: 'Dataset Ulasan', value: 'Google Play Store' },
